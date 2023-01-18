@@ -1,0 +1,2 @@
+2023-01-12T00:00:00Z	Lorem ipsum: https://www.seignard.com/datadog.html
+2023-01-13T00:00:00Z	Logging to Datadog from Nomad workload: https://www.seignard.com/nomad_logging.html

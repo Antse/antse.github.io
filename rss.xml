@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel>
+	<title>Pages</title>
+	<description>blog with various projects and articles about computer-related things</description>
+	<link>https://www.seignard.com</link>
+<item>
+	<title>Lorem ipsum</title>
+	<link>https://www.seignard.com/datadog.html</link>
+	<guid>https://www.seignard.com/datadog.html</guid>
+	<dc:date>2023-01-12T00:00:00Z</dc:date>
+	<author>antoine</author>
+	<description>This is a lorem ipsum</description>
+</item>
+<item>
+	<title>Logging to Datadog from Nomad workload</title>
+	<link>https://www.seignard.com/nomad_logging.html</link>
+	<guid>https://www.seignard.com/nomad_logging.html</guid>
+	<dc:date>2023-01-13T00:00:00Z</dc:date>
+	<author>antoine</author>
+	<description>How to stream logs from a Nomad workload</description>
+</item>
+</channel>
+</rss>

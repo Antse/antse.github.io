@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Language" content="en" />
+	<meta name="viewport" content="width=device-width" />
+	<meta name="keywords" content="datadog nomad logging log" />
+	<meta name="description" content="How to stream logs from a Nomad workload" />
+	<meta name="author" content="antoine" />
+	<meta name="generator" content="saait (https://git.codemadness.org/saait/file/README.html)" />
+	<title>Logging to Datadog from Nomad workload - Pages</title>
+	<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="print.css" type="text/css" media="print" />
+	<link rel="alternate" href="atom.xml" type="application/atom+xml" title="Pages Atom Feed" />
+	<link rel="alternate" href="atom_content.xml" type="application/atom+xml" title="Pages Atom Feed with content" />
+	<link rel="icon" href="/favicon.png" type="image/png" />
+</head>
+<body>
+	<nav id="menuwrap">
+		<table id="menu" width="100%" border="0">
+		<tr>
+			<td id="links" align="left">
+				<a href="index.html">Blog</a> |
+				<a href="/git/" title="Git repository with some of my projects">Git</a> |
+				<a href="/releases/">Releases</a> |
+				<a href="gopher://codemadness.org">Gopherhole</a>
+			</td>
+			<td id="links-contact" align="right">
+				<span class="hidden"> | </span>
+				<a href="feeds.html">Feeds</a> |
+				<a href="pgp.asc">PGP</a> |
+				<a href="mailto:antoine@AT@seignard.DOT.com">Mail</a>
+			</td>
+		</tr>
+		</table>
+	</nav>
+	<hr class="hidden" />
+	<main id="mainwrap">
+		<div id="main">
+			<article>
+<header>
+	<h1>Logging to Datadog from Nomad workload</h1>
+	<p>
+	<strong>Last modification on </strong> <time>2023-01-13</time>
+	</p>
+</header>
+
+<h1>Ship logs from Nomad workload to Datadog</h1>
+<h2>Context</h2>
+<p>One common task to achieve during the build of a platform is to
+have logs ship to a central place where they can be searchable.</p>
+<p>In modern architectures, most of the workloads are isolated from each others, so this is 
+not an easy task to send application logs for several reasons : 
+<ul>
+<li>Containers are by design isolated</li>
+<li>On a Nomad cluster, you can run others tasks such as <strong>java</strong>, <strong>firecracker</strong> VMs, and so.</li>
+</ul>
+</p>
+<h2>Solution</h2>
+<p>There are several ways to ship log from a Nomad workload to Datadog.
+I will highlight only one, a <strong>sidecar task</strong>.</p>
+<p>In Nomad, task groups are sharing a common file system for each allocations running.
+have logs ship to a central place where they can be searchable.</p>
+<p>Official documentation can be found
+<a href="https://developer.hashicorp.com/nomad/docs/concepts/filesystem#filesystem">here</a>.
+<img src="datadog_shipping_with_a_sidecar_task.png" alt="datadog in nomad
+cluster" /></p>
+<p>The application need to be configured to log in the allocation storage.</p>
+<p>This is an example of sending logs from an application : </p>
+<p><code>
+config :logger, :error_log, 
+    path: &quot;/alloc/data/info.log&quot;,
+    level: :debug
+</code>
+<blockquote><h4>references</h4>
+<ul>
+<li>https://discuss.hashicorp.com/t/logging-collection-in-docker-and-let-datadog-agent-to-collect-to-display-in-datadog/44482</li>
+<li>https://developer.hashicorp.com/nomad/docs/concepts/filesystem#filesystem</li>
+</ul>
+</blockquote>
+</p>
+
+			</article>
+		</div>
+	</main>
+</body>
+</html>
