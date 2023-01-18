@@ -1,2 +1,3 @@
-https://www.seignard.com/datadog.html
 https://www.seignard.com/nomad_logging.html
+https://www.seignard.com/datadog.html
+https://www.seignard.com/composite.html

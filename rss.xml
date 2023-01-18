@@ -7,6 +7,14 @@
 	<description>blog with various projects and articles about computer-related things</description>
 	<link>https://www.seignard.com</link>
 <item>
+	<title>Logging to Datadog from Nomad workload</title>
+	<link>https://www.seignard.com/nomad_logging.html</link>
+	<guid>https://www.seignard.com/nomad_logging.html</guid>
+	<dc:date>2023-01-13T00:00:00Z</dc:date>
+	<author>antoine</author>
+	<description>How to stream logs from a Nomad workload</description>
+</item>
+<item>
 	<title>Lorem ipsum</title>
 	<link>https://www.seignard.com/datadog.html</link>
 	<guid>https://www.seignard.com/datadog.html</guid>
@@ -15,12 +23,12 @@
 	<description>This is a lorem ipsum</description>
 </item>
 <item>
-	<title>Logging to Datadog from Nomad workload</title>
-	<link>https://www.seignard.com/nomad_logging.html</link>
-	<guid>https://www.seignard.com/nomad_logging.html</guid>
-	<dc:date>2023-01-13T00:00:00Z</dc:date>
+	<title>Composite actions on Github</title>
+	<link>https://www.seignard.com/composite.html</link>
+	<guid>https://www.seignard.com/composite.html</guid>
+	<dc:date>2023-01-18T00:00:00Z</dc:date>
 	<author>antoine</author>
-	<description>How to stream logs from a Nomad workload</description>
+	<description>reuse steps on github actions and centralize them</description>
 </item>
 </channel>
 </rss>

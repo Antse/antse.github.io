@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Language" content="en" />
+	<meta name="viewport" content="width=device-width" />
+	<meta name="keywords" content="composite github actions organization" />
+	<meta name="description" content="reuse steps on github actions and centralize them" />
+	<meta name="author" content="antoine" />
+	<meta name="generator" content="saait (https://git.codemadness.org/saait/file/README.html)" />
+	<title>Composite actions on Github - Pages</title>
+	<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="print.css" type="text/css" media="print" />
+	<link rel="alternate" href="atom.xml" type="application/atom+xml" title="Pages Atom Feed" />
+	<link rel="alternate" href="atom_content.xml" type="application/atom+xml" title="Pages Atom Feed with content" />
+	<link rel="icon" href="/favicon.png" type="image/png" />
+</head>
+<body>
+	<nav id="menuwrap">
+		<table id="menu" width="100%" border="0">
+		<tr>
+			<td id="links" align="left">
+				<a href="index.html">Blog</a> |
+				<a href="/git/" title="Git repository with some of my projects">Git</a> |
+				<a href="/releases/">Releases</a> |
+				<a href="gopher://seignard.fr">Gopherhole</a>
+			</td>
+			<td id="links-contact" align="right">
+				<span class="hidden"> | </span>
+				<a href="feeds.html">Feeds</a> |
+				<a href="pgp.asc">PGP</a> |
+				<a href="mailto:antoine@AT@seignard.DOT.com">Mail</a>
+			</td>
+		</tr>
+		</table>
+	</nav>
+	<hr class="hidden" />
+	<main id="mainwrap">
+		<div id="main">
+			<article>
+<header>
+	<h1>Composite actions on Github</h1>
+	<p>
+	<strong>Last modification on </strong> <time>2023-01-18</time>
+	</p>
+</header>
+
+<h1>Composite Actions on Github</h1>
+<h2>Introduction</h2>
+<p>Most of the time when using workflows some steps are duplicated on other
+worflows.</p>
+<p>When the time come to update those steps, we need to take care about all
+different aerea where steps has been duplicated.</p>
+<p>It would be more convinient to have a common place where a single update can
+rule them all.</p>
+<h2>How can we organize this central place ?</h2>
+<p>Inside a github organisation, when you have multiple repositories and you want
+to share actions between all those repositories.</p>
+<ul>
+<li>Create a central repository</li>
+<li>Clone the repository</li>
+<li>Create the expected layout</li>
+</ul>
+<p><code>mkdir -p .github/workflows/actions</code></p>
+<ul>
+<li>Move in this directory</li>
+</ul>
+<p><code>cd .github/workflows/actions</code></p>
+<p>For Each composite actions you want to create : </p>
+<ul>
+<li>Create a directory (this will be the name of the action)</li>
+</ul>
+<p><code>mkdir mycoolaction</code></p>
+<ul>
+<li>Create an action.yml file inside this directory.</li>
+</ul>
+
+			</article>
+		</div>
+	</main>
+</body>
+</html>
