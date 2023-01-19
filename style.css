@@ -2,8 +2,8 @@ html {
 	overflow-y: scroll;
 }
 body {
-	background-color: #fff;
-	color: #000;
+  background-color: var(--link-background);
+	color: var(--link-foreground);
 	font-family: sans-serif;
 	margin: 0;
 	padding: 1ex;
@@ -111,6 +111,6 @@ code {
 }
 :root {
     --body-foreground: #0c1c34;
-    --body-background: #fff;
+    --body-background: #fffff7;
     --link-foreground: #6a6b6f
 }
