@@ -96,8 +96,8 @@ a:hover {
 		color: var(--dark-body-foreground);
 	}
 	code {
-		background-color: rgb(197, 197, 197);
-		border-color: rgb(219, 219, 219);
+		background-color: rgb(45, 44, 44);
+		border-color: rgb(74, 74, 74);
 	}
 	hr {
 		border-color: #222;
@@ -113,7 +113,7 @@ a:hover {
 		border-color: inherit
 	}
 	#main {
-		border-top: 3px solid #222;
+		border-top: 3px solid var(--dark-body-foreground);
 	}
 }
 :root {
