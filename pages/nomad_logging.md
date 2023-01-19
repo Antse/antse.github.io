@@ -30,6 +30,6 @@ config :logger, :error_log,
     path: "/alloc/data/info.log",
     level: :debug
 ``
-> #### references
-> - https://discuss.hashicorp.com/t/logging-collection-in-docker-and-let-datadog-agent-to-collect-to-display-in-datadog/44482
-> - https://developer.hashicorp.com/nomad/docs/concepts/filesystem#filesystem
+## References
+> - [nomad community discussion](https://discuss.hashicorp.com/t/logging-collection-in-docker-and-let-datadog-agent-to-collect-to-display-in-datadog/44482)
+> - [filesystem official documentation](https://developer.hashicorp.com/nomad/docs/concepts/filesystem#filesystem)
