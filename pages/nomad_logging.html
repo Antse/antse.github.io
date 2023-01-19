@@ -1,0 +1,34 @@
+<h1>Ship logs from Nomad workload to Datadog</h1>
+<h2>Context</h2>
+<p>One common task to achieve during the build of a platform is to
+have logs ship to a central place where they can be searchable.</p>
+<p>In modern architectures, most of the workloads are isolated from each others, so this is 
+not an easy task to send application logs for several reasons : 
+<ul>
+<li>Containers are by design isolated</li>
+<li>On a Nomad cluster, you can run others tasks such as <strong>java</strong>, <strong>firecracker</strong> VMs, and so.</li>
+</ul>
+</p>
+<h2>Solution</h2>
+<p>There are several ways to ship log from a Nomad workload to Datadog.
+I will highlight only one, a <strong>sidecar task</strong>.</p>
+<p>In Nomad, task groups are sharing a common file system for each allocations running.
+have logs ship to a central place where they can be searchable.</p>
+<p>Official documentation can be found
+<a href="https://developer.hashicorp.com/nomad/docs/concepts/filesystem#filesystem">here</a>.
+<img src="datadog_shipping_with_a_sidecar_task.png" alt="datadog in nomad
+cluster" /></p>
+<p>The application need to be configured to log in the allocation storage.</p>
+<p>This is an example of sending logs from an application : </p>
+<p><code>
+config :logger, :error_log, 
+    path: &quot;/alloc/data/info.log&quot;,
+    level: :debug
+</code>
+<blockquote><h4>references</h4>
+<ul>
+<li>https://discuss.hashicorp.com/t/logging-collection-in-docker-and-let-datadog-agent-to-collect-to-display-in-datadog/44482</li>
+<li>https://developer.hashicorp.com/nomad/docs/concepts/filesystem#filesystem</li>
+</ul>
+</blockquote>
+</p>

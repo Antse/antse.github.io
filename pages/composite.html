@@ -1,0 +1,29 @@
+<h1>Composite Actions on Github</h1>
+<h2>Introduction</h2>
+<p>Most of the time when using workflows some steps are duplicated on other
+worflows.</p>
+<p>When the time come to update those steps, we need to take care about all
+different aerea where steps has been duplicated.</p>
+<p>It would be more convinient to have a common place where a single update can
+rule them all.</p>
+<h2>How can we organize this central place ?</h2>
+<p>Inside a github organisation, when you have multiple repositories and you want
+to share actions between all those repositories.</p>
+<ul>
+<li>Create a central repository</li>
+<li>Clone the repository</li>
+<li>Create the expected layout</li>
+</ul>
+<p><code>mkdir -p .github/workflows/actions</code></p>
+<ul>
+<li>Move in this directory</li>
+</ul>
+<p><code>cd .github/workflows/actions</code></p>
+<p>For Each composite actions you want to create : </p>
+<ul>
+<li>Create a directory (this will be the name of the action)</li>
+</ul>
+<p><code>mkdir mycoolaction</code></p>
+<ul>
+<li>Create an action.yml file inside this directory.</li>
+</ul>
