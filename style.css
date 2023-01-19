@@ -75,12 +75,17 @@ code {
 #main {
 	margin: 0px auto;
 	max-width: 80ex;
-	text-decoration: none;
 	font-weight: lighter;
 }
 #menu a {
-	font-weight: lighter;
-	vertical-align: middle;
+    color: var(--link-foreground);
+    border-bottom: 1px solid #dedfe3;
+    text-decoration: none;
+    transition: color 0.2s ease, border-color 0.2s ease
+}
+#menu a:hover {
+    color: #ec1c34;
+    border-color: inherit
 }
 .hidden {
 	display: none;
@@ -103,4 +108,9 @@ code {
 	#main {
 		border-top: 3px solid #222;
 	}
+}
+:root {
+    --body-foreground: #0c1c34;
+    --body-background: #fff;
+    --link-foreground: #6a6b6f
 }
