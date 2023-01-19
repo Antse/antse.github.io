@@ -92,18 +92,25 @@ a:hover {
 }
 @media (prefers-color-scheme: dark) {
 	body {
-		background-color: #000;
-		color: #bdbdbd;
+		background-color: var(--dark-body-background);
+		color: var(--dark-body-foreground);
 	}
 	code {
-		background-color: #111;
-		border-color: #222;
+		background-color: rgb(197, 197, 197);
+		border-color: rgb(219, 219, 219);
 	}
 	hr {
 		border-color: #222;
 	}
 	a {
-		color: #56c8ff;
+		color: var(--dark-body-foreground);
+    	border-bottom: 1px solid var(--dark-body-foreground);
+    	text-decoration: none;
+    	transition: color 0.2s ease, border-color 0.2s ease
+	}
+	a:hover {
+		color: #e1d589;
+		border-color: inherit
 	}
 	#main {
 		border-top: 3px solid #222;
@@ -112,5 +119,8 @@ a:hover {
 :root {
     --body-foreground: #0c1c34;
     --body-background: #fffff7;
-    --link-foreground: #6a6b6f
+    --link-foreground: #6a6b6f;
+    --dark-body-foreground: #767676;
+    --dark-body-background: #000000;
+    --dark-link-foreground: #e1d589
 }
