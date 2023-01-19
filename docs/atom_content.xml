@@ -3,18 +3,18 @@
 	<title type="text">Pages</title>
 	<subtitle type="text">blog with various projects and articles about computer-related things</subtitle>
 	<updated>2023-01-19T00:00:00Z</updated>
-	<link rel="alternate" type="text/html" href="https://www.seignard.com" />
-	<id>https://www.seignard.com/atom.xml</id>
-	<link rel="self" type="application/atom+xml" href="https://www.seignard.com/atom.xml" />
+	<link rel="alternate" type="text/html" href="https://www.seignard.fr" />
+	<id>https://www.seignard.fr/atom.xml</id>
+	<link rel="self" type="application/atom+xml" href="https://www.seignard.fr/atom.xml" />
 <entry>
 	<title type="text">Logging to Datadog from Nomad workload</title>
-	<link rel="alternate" type="text/html" href="https://www.seignard.com/nomad_logging.html" />
-	<id>https://www.seignard.com/nomad_logging.html</id>
+	<link rel="alternate" type="text/html" href="https://www.seignard.fr/nomad_logging.html" />
+	<id>https://www.seignard.fr/nomad_logging.html</id>
 	<updated>2023-01-13T00:00:00Z</updated>
 	<published>2023-01-13T00:00:00Z</published>
 	<author>
 		<name>antoine</name>
-		<uri>https://www.seignard.com</uri>
+		<uri>https://www.seignard.fr</uri>
 	</author>
 	<summary type="text">How to stream logs from a Nomad workload</summary>
 	<content type="html"><![CDATA[<h1>Logging to Datadog from Nomad workload</h1>
@@ -57,13 +57,13 @@ config :logger, :error_log,
 </entry>
 <entry>
 	<title type="text">Lorem ipsum</title>
-	<link rel="alternate" type="text/html" href="https://www.seignard.com/datadog.html" />
-	<id>https://www.seignard.com/datadog.html</id>
+	<link rel="alternate" type="text/html" href="https://www.seignard.fr/datadog.html" />
+	<id>https://www.seignard.fr/datadog.html</id>
 	<updated>2023-01-12T00:00:00Z</updated>
 	<published>2023-01-12T00:00:00Z</published>
 	<author>
 		<name>antoine</name>
-		<uri>https://www.seignard.com</uri>
+		<uri>https://www.seignard.fr</uri>
 	</author>
 	<summary type="text">This is a lorem ipsum</summary>
 	<content type="html"><![CDATA[<h1>Lorem ipsum</h1>
@@ -84,13 +84,13 @@ config :logger, :error_log,
 </entry>
 <entry>
 	<title type="text">Composite actions on Github</title>
-	<link rel="alternate" type="text/html" href="https://www.seignard.com/composite.html" />
-	<id>https://www.seignard.com/composite.html</id>
+	<link rel="alternate" type="text/html" href="https://www.seignard.fr/composite.html" />
+	<id>https://www.seignard.fr/composite.html</id>
 	<updated>2023-01-18T00:00:00Z</updated>
 	<published>2023-01-18T00:00:00Z</published>
 	<author>
 		<name>antoine</name>
-		<uri>https://www.seignard.com</uri>
+		<uri>https://www.seignard.fr</uri>
 	</author>
 	<summary type="text">reuse steps on github actions and centralize them</summary>
 	<content type="html"><![CDATA[<h1>Composite actions on Github</h1>

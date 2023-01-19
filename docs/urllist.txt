@@ -1,3 +1,3 @@
-https://www.seignard.com/nomad_logging.html
-https://www.seignard.com/datadog.html
-https://www.seignard.com/composite.html
+https://www.seignard.fr/nomad_logging.html
+https://www.seignard.fr/datadog.html
+https://www.seignard.fr/composite.html
