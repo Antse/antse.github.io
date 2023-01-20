@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Language" content="en" />
+	<meta name="viewport" content="width=device-width" />
+	<meta name="keywords" content="security acl tailscale" />
+	<meta name="description" content="separate access to your environement using tailscale ACL&#39;s" />
+	<meta name="author" content="antoine" />
+	<meta name="generator" content="saait (https://git.codemadness.org/saait/file/README.html)" />
+	<title>Tailscale ACL restrictions  - Pages</title>
+	<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="print.css" type="text/css" media="print" />
+	<link rel="alternate" href="atom.xml" type="application/atom+xml" title="Pages Atom Feed" />
+	<link rel="alternate" href="atom_content.xml" type="application/atom+xml" title="Pages Atom Feed with content" />
+	<link rel="icon" href="/favicon.png" type="image/png" />
+</head>
+<body>
+	<nav id="menuwrap">
+		<table id="menu" width="100%" border="0">
+		<tr>
+			<td id="links" align="left">
+				<a href="index.html">Blog</a> |
+				<a href="https://github.com/antse" title="Git repository with some of my work">Git</a> |
+				<a href="gopher://gopher.seignard.fr">Gopherhole</a>
+			</td>
+			<td id="links-contact" align="right">
+				<span class="hidden"> | </span>
+				<a href="feeds.html">Feeds</a> |
+				<a href="pgp.asc">PGP</a> |
+				<a href="mailto:antoine@AT@seignard.DOT.fr">Mail</a>
+			</td>
+		</tr>
+		</table>
+	</nav>
+	<hr class="hidden" />
+	<main id="mainwrap">
+		<div id="main">
+			<article>
+<header>
+	<h1>Tailscale ACL restrictions </h1>
+	<p>
+	<strong>Last modification on </strong> <time>2023-01-20</time>
+	</p>
+</header>
+
+<h1>Restrict access on the infrastructure using tailscale ACL's</h1>
+<h2>Introduction</h2>
+<p>Tailscale is a great mesh vpn with minimal setup to be able to join a private
+network on top of internet.</p>
+<p>One of the great feature is to use a <strong>relay[1]</strong> to forward your traffic from
+your laptop to your Cloud infrastructure and only using private IP
+addresses.</p>
+<p>One of the drawback of this feature is that anyone on the mesh can access your
+infrastructure.</p>
+<p>Godd news is that we can setup <strong>ACL[2]</strong> to restrict access to people.</p>
+<h2>Setup ACL's</h2>
+<h3>Initial scope</h3>
+<p>Let's start with 2 teams: 
+<ul>
+<li>Developers folks</li>
+<li>Platform guys</li>
+</ul>
+</p>
+<p>The Platform guys need to have access all part of the infrastructure.
+The Developers folks need only to read some data on staging Databases.</p>
+<p>Let's assume that Staging Databases are located on a dedicated subnet:
+<code>10.0.42.0/24</code></p>
+<h3>Use tags and acl</h3>
+<p>There is a file defining the global access policy to tailscale, it's a big JSON
+file.</p>
+<p>the simplest way to implement our scope policy is to define 2 groups : </p>
+<ul>
+<li>platform</li>
+<li>developer</li>
+</ul>
+<p><code>
+&quot;groups&quot;: {
+		&quot;group:platform&quot;: [
+			&quot;jean@corp.com&quot;,
+			&quot;paulette@corp.com&quot;,
+		],
+		&quot;group:developer&quot;: [
+			&quot;pierre@corp.com&quot;,
+			&quot;rachel@corp.com&quot;,
+		],
+	},
+</code></p>
+<h2>References</h2>
+<p>[1]: <a href="https://tailscale.com/kb/1021/install-aws/">https://tailscale.com/kb/1021/install-aws/</a>
+[2]: <a href="https://tailscale.com/kb/1068/acl-tags/">https://tailscale.com/kb/1068/acl-tags/</a></p>
+
+			</article>
+		</div>
+	</main>
+</body>
+</html>

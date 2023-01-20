@@ -7,20 +7,20 @@
 	<description>blog with various projects and articles about computer-related things</description>
 	<link>https://www.seignard.fr</link>
 <item>
+	<title>Tailscale ACL restrictions </title>
+	<link>https://www.seignard.fr/tailscale.html</link>
+	<guid>https://www.seignard.fr/tailscale.html</guid>
+	<dc:date>2023-01-20T00:00:00Z</dc:date>
+	<author>antoine</author>
+	<description>separate access to your environement using tailscale ACL&#39;s</description>
+</item>
+<item>
 	<title>Logging to Datadog from Nomad workload</title>
 	<link>https://www.seignard.fr/nomad_logging.html</link>
 	<guid>https://www.seignard.fr/nomad_logging.html</guid>
 	<dc:date>2023-01-13T00:00:00Z</dc:date>
 	<author>antoine</author>
 	<description>How to stream logs from a Nomad workload</description>
-</item>
-<item>
-	<title>Lorem ipsum</title>
-	<link>https://www.seignard.fr/datadog.html</link>
-	<guid>https://www.seignard.fr/datadog.html</guid>
-	<dc:date>2023-01-12T00:00:00Z</dc:date>
-	<author>antoine</author>
-	<description>This is a lorem ipsum</description>
 </item>
 <item>
 	<title>Composite actions on Github</title>

@@ -1,3 +1,3 @@
+https://www.seignard.fr/tailscale.html
 https://www.seignard.fr/nomad_logging.html
-https://www.seignard.fr/datadog.html
 https://www.seignard.fr/composite.html

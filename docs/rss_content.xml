@@ -7,6 +7,61 @@
 	<description>blog with various projects and articles about computer-related things</description>
 	<link>https://www.seignard.fr</link>
 <item>
+	<title>Tailscale ACL restrictions </title>
+	<link>https://www.seignard.fr/tailscale.html</link>
+	<guid>https://www.seignard.fr/tailscale.html</guid>
+	<dc:date>2023-01-20T00:00:00Z</dc:date>
+	<author>antoine</author>
+	<description><![CDATA[<h1>Tailscale ACL restrictions </h1>
+        <p><strong>Last modification on </strong> <time>2023-01-20</time></p>
+        <h1>Restrict access on the infrastructure using tailscale ACL's</h1>
+<h2>Introduction</h2>
+<p>Tailscale is a great mesh vpn with minimal setup to be able to join a private
+network on top of internet.</p>
+<p>One of the great feature is to use a <strong>relay[1]</strong> to forward your traffic from
+your laptop to your Cloud infrastructure and only using private IP
+addresses.</p>
+<p>One of the drawback of this feature is that anyone on the mesh can access your
+infrastructure.</p>
+<p>Godd news is that we can setup <strong>ACL[2]</strong> to restrict access to people.</p>
+<h2>Setup ACL's</h2>
+<h3>Initial scope</h3>
+<p>Let's start with 2 teams: 
+<ul>
+<li>Developers folks</li>
+<li>Platform guys</li>
+</ul>
+</p>
+<p>The Platform guys need to have access all part of the infrastructure.
+The Developers folks need only to read some data on staging Databases.</p>
+<p>Let's assume that Staging Databases are located on a dedicated subnet:
+<code>10.0.42.0/24</code></p>
+<h3>Use tags and acl</h3>
+<p>There is a file defining the global access policy to tailscale, it's a big JSON
+file.</p>
+<p>the simplest way to implement our scope policy is to define 2 groups : </p>
+<ul>
+<li>platform</li>
+<li>developer</li>
+</ul>
+<p><code>
+&quot;groups&quot;: {
+		&quot;group:platform&quot;: [
+			&quot;jean@corp.com&quot;,
+			&quot;paulette@corp.com&quot;,
+		],
+		&quot;group:developer&quot;: [
+			&quot;pierre@corp.com&quot;,
+			&quot;rachel@corp.com&quot;,
+		],
+	},
+</code></p>
+<h2>References</h2>
+<p>[1]: <a href="https://tailscale.com/kb/1021/install-aws/">https://tailscale.com/kb/1021/install-aws/</a>
+[2]: <a href="https://tailscale.com/kb/1068/acl-tags/">https://tailscale.com/kb/1068/acl-tags/</a></p>
+]]></description>
+</item>
+<item>
 	<title>Logging to Datadog from Nomad workload</title>
 	<link>https://www.seignard.fr/nomad_logging.html</link>
 	<guid>https://www.seignard.fr/nomad_logging.html</guid>
@@ -48,28 +103,6 @@ config :logger, :error_log,
 </ul>
 </blockquote>
 </p>
-]]></description>
-</item>
-<item>
-	<title>Lorem ipsum</title>
-	<link>https://www.seignard.fr/datadog.html</link>
-	<guid>https://www.seignard.fr/datadog.html</guid>
-	<dc:date>2023-01-12T00:00:00Z</dc:date>
-	<author>antoine</author>
-	<description><![CDATA[<h1>Lorem ipsum</h1>
-        <p><strong>Last modification on </strong> <time>2023-01-12</time></p>
-        <h1>Stream logs from Nomad workload to Datadog API</h1>
-<h2>Why</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dictum sapien eros, eget tincidunt massa imperdiet non. Proin dignissim volutpat massa, eget euismod nisi bibendum nec. Quisque posuere nunc ut eleifend fermentum. Suspendisse et urna finibus leo blandit dapibus id at justo. Suspendisse pellentesque, mi ac maximus scelerisque, purus sem blandit elit, sit amet sollicitudin nisl eros mollis urna. Quisque consequat leo at lorem tincidunt, ullamcorper pretium neque placerat. Donec tristique gravida ullamcorper. Phasellus egestas est eros, sit amet porttitor urna tincidunt eu. Sed eros ex, venenatis ut molestie ac, vulputate in ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum mi vel ultrices rutrum.</p>
-<h2>How</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dictum sapien eros, eget tincidunt massa imperdiet non. Proin dignissim volutpat massa, eget euismod nisi bibendum nec. Quisque posuere nunc ut eleifend fermentum. Suspendisse et urna finibus leo blandit dapibus id at justo. Suspendisse pellentesque, mi ac maximus scelerisque, purus sem blandit elit, sit amet sollicitudin nisl eros mollis urna. Quisque consequat leo at lorem tincidunt, ullamcorper pretium neque placerat. Donec tristique gravida ullamcorper. Phasellus egestas est eros, sit amet porttitor urna tincidunt eu. Sed eros ex, venenatis ut molestie ac, vulputate in ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum mi vel ultrices rutrum.</p>
-<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante</p>
-</blockquote>
-<p><code>`html
-&lt;pre&gt;
-  &lt;p&gt;Example text here...&lt;/p&gt;
-&lt;/pre&gt;
-</code>`</p>
 ]]></description>
 </item>
 <item>
