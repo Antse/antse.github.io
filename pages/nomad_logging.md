@@ -17,6 +17,7 @@ In Nomad, task groups are sharing a common file system for each allocations runn
 have logs ship to a central place where they can be searchable.
 
 Official documentation can be found
+
 [here](https://developer.hashicorp.com/nomad/docs/concepts/filesystem#filesystem).
 ![datadog in nomad
 cluster](datadog_shipping_with_a_sidecar_task.png)
@@ -25,11 +26,10 @@ The application need to be configured to log in the allocation storage.
 
 This is an example of sending logs from an application : 
 
-``
-config :logger, :error_log, 
-    path: "/alloc/data/info.log",
-    level: :debug
-``
+	config :logger, :error_log, 
+		path: "/alloc/data/info.log",
+		level: :debug
+
 ## References
 > - [nomad community discussion](https://discuss.hashicorp.com/t/logging-collection-in-docker-and-let-datadog-agent-to-collect-to-display-in-datadog/44482)
 > - [filesystem official documentation](https://developer.hashicorp.com/nomad/docs/concepts/filesystem#filesystem)

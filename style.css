@@ -7,6 +7,7 @@ body {
 	font-family: sans-serif;
 	margin: 0;
 	padding: 1ex;
+	line-height: 1.4em;
 }
 /* HTML5 semantic tags: some (older) browsers display this inline by default */
 article, figcaption, figure, header, main, nav {
@@ -120,7 +121,7 @@ a:hover {
     --body-foreground: #0c1c34;
     --body-background: #fffff7;
     --link-foreground: #6a6b6f;
-    --dark-body-foreground: #767676;
+    --dark-body-foreground: #aaaaaa;
     --dark-body-background: #000000;
     --dark-link-foreground: #e1d589
 }

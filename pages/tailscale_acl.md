@@ -37,18 +37,16 @@ the simplest way to implement our scope policy is to define 2 groups :
 - platform
 - developer
 
-``
-"groups": {
-		"group:platform": [
-			"jean@corp.com",
-			"paulette@corp.com",
-		],
-		"group:developer": [
-			"pierre@corp.com",
-			"rachel@corp.com",
-		],
-	},
-``
+	"groups": {
+			"group:platform": [
+				"jean@corp.com",
+				"paulette@corp.com",
+			],
+			"group:developer": [
+				"pierre@corp.com",
+				"rachel@corp.com",
+			],
+		},
 
 ## References
 
