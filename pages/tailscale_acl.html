@@ -37,7 +37,26 @@ file.</p>
 			&quot;pierre@corp.com&quot;,
 			&quot;rachel@corp.com&quot;,
 		],
+		&quot;group:datanalyst&quot;: [
+			&quot;quentin@corp.com&quot;,
+			&quot;david@corp.com&quot;,
+		],
 	},
+</code></pre>
+<h3>Define the proper ACL</h3>
+<p>At this stage, we have 2 user groups then we need to define acl's blocks to
+restrict access.</p>
+<pre><code>// Access control lists.
+&quot;acls&quot;: [
+	// Match absolutely everything.
+	// Comment this section out if you want to define specific restrictions.
+	// Full access
+	{&quot;action&quot;: &quot;accept&quot;, &quot;src&quot;: [&quot;group:platform&quot;], &quot;dst&quot;: [&quot;*:*&quot;]},
+	// Access to the websites
+	{&quot;action&quot;: &quot;accept&quot;, &quot;src&quot;: [&quot;group:developer&quot;], &quot;dst&quot;: [&quot;*:80&quot;]},
+	// Access to the database 
+	{&quot;action&quot;: &quot;accept&quot;, &quot;src&quot;: [&quot;group:datanalyst&quot;], &quot;dst&quot;: [&quot;*:5432&quot;]},
+],
 </code></pre>
 <h2>References</h2>
 <p>[1]: <a href="https://tailscale.com/kb/1021/install-aws/">https://tailscale.com/kb/1021/install-aws/</a>

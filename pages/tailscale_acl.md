@@ -46,7 +46,28 @@ the simplest way to implement our scope policy is to define 2 groups :
 				"pierre@corp.com",
 				"rachel@corp.com",
 			],
+			"group:datanalyst": [
+				"quentin@corp.com",
+				"david@corp.com",
+			],
 		},
+
+### Define the proper ACL
+
+At this stage, we have 2 user groups then we need to define acl's blocks to
+restrict access.
+
+	// Access control lists.
+	"acls": [
+		// Match absolutely everything.
+		// Comment this section out if you want to define specific restrictions.
+		// Full access
+		{"action": "accept", "src": ["group:platform"], "dst": ["*:*"]},
+		// Access to the websites
+		{"action": "accept", "src": ["group:developer"], "dst": ["*:80"]},
+		// Access to the database 
+		{"action": "accept", "src": ["group:datanalyst"], "dst": ["*:5432"]},
+	],
 
 ## References
 
