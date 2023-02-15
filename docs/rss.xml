@@ -15,6 +15,14 @@
 	<description>separate access to your environement using tailscale ACL&#39;s</description>
 </item>
 <item>
+	<title>Submodules on Git</title>
+	<link>https://www.seignard.fr/submodules.html</link>
+	<guid>https://www.seignard.fr/submodules.html</guid>
+	<dc:date>2023-02-15T00:00:00Z</dc:date>
+	<author>antoine</author>
+	<description>use Git submodules</description>
+</item>
+<item>
 	<title>Logging to Datadog from Nomad workload</title>
 	<link>https://www.seignard.fr/nomad_logging.html</link>
 	<guid>https://www.seignard.fr/nomad_logging.html</guid>

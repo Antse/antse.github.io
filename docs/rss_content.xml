@@ -80,6 +80,30 @@ restrict access.</p>
 ]]></description>
 </item>
 <item>
+	<title>Submodules on Git</title>
+	<link>https://www.seignard.fr/submodules.html</link>
+	<guid>https://www.seignard.fr/submodules.html</guid>
+	<dc:date>2023-02-15T00:00:00Z</dc:date>
+	<author>antoine</author>
+	<description><![CDATA[<h1>Submodules on Git</h1>
+        <p><strong>Last modification on </strong> <time>2023-02-15</time></p>
+        <h1>Using Git sub modules</h1>
+<h2>Add a git submodule</h2>
+<pre><code>$ git add git submodule add -b main https://github.com/slug/repo.git mymodule 
+</code></pre>
+<h2>When cloning a repo containing submodules</h2>
+<pre><code>$ git clone https://github.com/slug/root.git
+$ cd root
+$ git submodule update --init
+</code></pre>
+<h2>Updating submodules</h2>
+<pre><code>$ git submodule update --remote
+</code></pre>
+<h2>References</h2>
+<p><a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">git submodules</a></p>
+]]></description>
+</item>
+<item>
 	<title>Logging to Datadog from Nomad workload</title>
 	<link>https://www.seignard.fr/nomad_logging.html</link>
 	<guid>https://www.seignard.fr/nomad_logging.html</guid>

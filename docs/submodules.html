@@ -4,11 +4,11 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta http-equiv="Content-Language" content="en" />
 	<meta name="viewport" content="width=device-width" />
-	<meta name="keywords" content="blog, stagit, stagit-gopher, nomad, tailscale, datadog" />
-	<meta name="description" content="blog with various projects and articles about computer-related things" />
+	<meta name="keywords" content="git submodules" />
+	<meta name="description" content="use Git submodules" />
 	<meta name="author" content="antoine" />
 	<meta name="generator" content="saait (https://git.codemadness.org/saait/file/README.html)" />
-	<title>Posts - Pages</title>
+	<title>Submodules on Git - Pages</title>
 	<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="print.css" type="text/css" media="print" />
 	<link rel="alternate" href="atom.xml" type="application/atom+xml" title="Pages Atom Feed" />
@@ -22,11 +22,11 @@
 			<td id="links" align="left">
 				<a href="index.html">Blog</a> |
 				<a href="https://github.com/antse" title="Git repository with some of my work">Git</a> |
-				<a href="gopher://seignard.fr">Gopherhole</a>
+				<a href="gopher://gopher.seignard.fr">Gopherhole</a>
 			</td>
 			<td id="links-contact" align="right">
 				<span class="hidden"> | </span>
-				<a href="rss.xml">Feeds</a> |
+				<a href="feeds.html">Feeds</a> |
 				<a href="pgp.asc">PGP</a> |
 				<a href="mailto:antoine@AT@seignard.DOT.fr">Mail</a>
 			</td>
@@ -36,13 +36,30 @@
 	<hr class="hidden" />
 	<main id="mainwrap">
 		<div id="main">
-			<h1>Posts</h1><h2>Last update: 2023-02-15</h2>
-			<table>
-<tr><td><time>2023-01-20</time></td><td><a href="tailscale.html">Tailscale ACL restrictions </a></td></tr>
-<tr><td><time>2023-02-15</time></td><td><a href="submodules.html">Submodules on Git</a></td></tr>
-<tr><td><time>2023-01-13</time></td><td><a href="nomad_logging.html">Logging to Datadog from Nomad workload</a></td></tr>
-<tr><td><time>2023-01-18</time></td><td><a href="composite.html">Composite actions on Github</a></td></tr>
-			</table>
+			<article>
+<header>
+	<h1>Submodules on Git</h1>
+	<p>
+	<strong>Last modification on </strong> <time>2023-02-15</time>
+	</p>
+</header>
+
+<h1>Using Git sub modules</h1>
+<h2>Add a git submodule</h2>
+<pre><code>$ git add git submodule add -b main https://github.com/slug/repo.git mymodule 
+</code></pre>
+<h2>When cloning a repo containing submodules</h2>
+<pre><code>$ git clone https://github.com/slug/root.git
+$ cd root
+$ git submodule update --init
+</code></pre>
+<h2>Updating submodules</h2>
+<pre><code>$ git submodule update --remote
+</code></pre>
+<h2>References</h2>
+<p><a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">git submodules</a></p>
+
+			</article>
 		</div>
 	</main>
 </body>

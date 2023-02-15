@@ -1,0 +1,14 @@
+<h1>Using Git sub modules</h1>
+<h2>Add a git submodule</h2>
+<pre><code>$ git add git submodule add -b main https://github.com/slug/repo.git mymodule 
+</code></pre>
+<h2>When cloning a repo containing submodules</h2>
+<pre><code>$ git clone https://github.com/slug/root.git
+$ cd root
+$ git submodule update --init
+</code></pre>
+<h2>Updating submodules</h2>
+<pre><code>$ git submodule update --remote
+</code></pre>
+<h2>References</h2>
+<p><a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">git submodules</a></p>

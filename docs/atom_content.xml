@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
 	<title type="text">Pages</title>
 	<subtitle type="text">blog with various projects and articles about computer-related things</subtitle>
-	<updated>2023-02-14T00:00:00Z</updated>
+	<updated>2023-02-15T00:00:00Z</updated>
 	<link rel="alternate" type="text/html" href="https://www.seignard.fr" />
 	<id>https://www.seignard.fr/atom.xml</id>
 	<link rel="self" type="application/atom+xml" href="https://www.seignard.fr/atom.xml" />
@@ -82,6 +82,35 @@ restrict access.</p>
 <h2>References</h2>
 <p>[1]: <a href="https://tailscale.com/kb/1021/install-aws/">https://tailscale.com/kb/1021/install-aws/</a></p>
 <p>[2]: <a href="https://tailscale.com/kb/1068/acl-tags/">https://tailscale.com/kb/1068/acl-tags/</a></p>
+]]></content>
+</entry>
+<entry>
+	<title type="text">Submodules on Git</title>
+	<link rel="alternate" type="text/html" href="https://www.seignard.fr/submodules.html" />
+	<id>https://www.seignard.fr/submodules.html</id>
+	<updated>2023-02-15T00:00:00Z</updated>
+	<published>2023-02-15T00:00:00Z</published>
+	<author>
+		<name>antoine</name>
+		<uri>https://www.seignard.fr</uri>
+	</author>
+	<summary type="text">use Git submodules</summary>
+	<content type="html"><![CDATA[<h1>Submodules on Git</h1>
+	<p><strong>Last modification on </strong> <time>2023-02-15</time></p>
+	<h1>Using Git sub modules</h1>
+<h2>Add a git submodule</h2>
+<pre><code>$ git add git submodule add -b main https://github.com/slug/repo.git mymodule 
+</code></pre>
+<h2>When cloning a repo containing submodules</h2>
+<pre><code>$ git clone https://github.com/slug/root.git
+$ cd root
+$ git submodule update --init
+</code></pre>
+<h2>Updating submodules</h2>
+<pre><code>$ git submodule update --remote
+</code></pre>
+<h2>References</h2>
+<p><a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">git submodules</a></p>
 ]]></content>
 </entry>
 <entry>
