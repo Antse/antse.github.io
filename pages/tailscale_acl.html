@@ -10,23 +10,26 @@ infrastructure.</p>
 <p>Godd news is that we can setup <strong>ACL[2]</strong> to restrict access to people.</p>
 <h2>Setup ACL's</h2>
 <h3>Initial scope</h3>
-<p>Let's start with 2 teams: 
+<p>Let's start with 3 teams: 
 <ul>
 <li>Developers folks</li>
+<li>Data Analysis guys</li>
 <li>Platform guys</li>
 </ul>
 </p>
 <p>The Platform guys need to have access all part of the infrastructure.
-The Developers folks need only to read some data on staging Databases.</p>
+The Developers folks need only to check the web application.
+The Data Analysis folks need only to read some data on staging Databases.</p>
 <p>Let's assume that Staging Databases are located on a dedicated subnet:
 <code>10.0.42.0/24</code></p>
 <h3>Use tags and acl</h3>
 <p>There is a file defining the global access policy to tailscale, it's a big JSON
 file.</p>
-<p>the simplest way to implement our scope policy is to define 2 groups : </p>
+<p>the simplest way to implement our scope policy is to define 3 groups : </p>
 <ul>
 <li>platform</li>
 <li>developer</li>
+<li>datanalyst</li>
 </ul>
 <pre><code>&quot;groups&quot;: {
 		&quot;group:platform&quot;: [
@@ -44,7 +47,7 @@ file.</p>
 	},
 </code></pre>
 <h3>Define the proper ACL</h3>
-<p>At this stage, we have 2 user groups then we need to define acl's blocks to
+<p>At this stage, we have 3 user groups then we need to define acl's blocks to
 restrict access.</p>
 <pre><code>// Access control lists.
 &quot;acls&quot;: [

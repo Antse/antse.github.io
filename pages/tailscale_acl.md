@@ -17,12 +17,14 @@ Godd news is that we can setup **ACL[2]** to restrict access to people.
 ## Setup ACL's
 ### Initial scope
 
-Let's start with 2 teams: 
+Let's start with 3 teams: 
 - Developers folks
+- Data Analysis guys
 - Platform guys
 
 The Platform guys need to have access all part of the infrastructure.
-The Developers folks need only to read some data on staging Databases.
+The Developers folks need only to check the web application.
+The Data Analysis folks need only to read some data on staging Databases.
 
 Let's assume that Staging Databases are located on a dedicated subnet:
 `10.0.42.0/24`
@@ -32,10 +34,11 @@ Let's assume that Staging Databases are located on a dedicated subnet:
 There is a file defining the global access policy to tailscale, it's a big JSON
 file.
 
-the simplest way to implement our scope policy is to define 2 groups : 
+the simplest way to implement our scope policy is to define 3 groups : 
 
 - platform
 - developer
+- datanalyst
 
 	"groups": {
 			"group:platform": [
@@ -54,7 +57,7 @@ the simplest way to implement our scope policy is to define 2 groups :
 
 ### Define the proper ACL
 
-At this stage, we have 2 user groups then we need to define acl's blocks to
+At this stage, we have 3 user groups then we need to define acl's blocks to
 restrict access.
 
 	// Access control lists.
