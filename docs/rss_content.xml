@@ -149,6 +149,26 @@ cluster" /></p>
 ]]></description>
 </item>
 <item>
+	<title>Atom feeds on Github</title>
+	<link>https://www.seignard.fr/git_atom.html</link>
+	<guid>https://www.seignard.fr/git_atom.html</guid>
+	<dc:date>2023-02-21T00:00:00Z</dc:date>
+	<author>antoine</author>
+	<description><![CDATA[<h1>Atom feeds on Github</h1>
+        <p><strong>Last modification on </strong> <time>2023-02-21</time></p>
+        <h2>Repo releases</h2>
+<p>https://github.com/:owner/:repo/releases.atom</p>
+<h2>Repo commits</h2>
+<p>https://github.com/:owner/:repo/commits.atom</p>
+<h2>Private feed</h2>
+<p>https://github.com/:user.private.atom?token=:secret</p>
+<h2>Repo tags</h2>
+<p>https://github.com/:user/:repo/tags.atom</p>
+<h2>User activity</h2>
+<p>https://github.com/:user.atom</p>
+]]></description>
+</item>
+<item>
 	<title>Composite actions on Github</title>
 	<link>https://www.seignard.fr/composite.html</link>
 	<guid>https://www.seignard.fr/composite.html</guid>

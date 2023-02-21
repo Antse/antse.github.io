@@ -31,6 +31,14 @@
 	<description>How to stream logs from a Nomad workload</description>
 </item>
 <item>
+	<title>Atom feeds on Github</title>
+	<link>https://www.seignard.fr/git_atom.html</link>
+	<guid>https://www.seignard.fr/git_atom.html</guid>
+	<dc:date>2023-02-21T00:00:00Z</dc:date>
+	<author>antoine</author>
+	<description>Follow github activity using special links</description>
+</item>
+<item>
 	<title>Composite actions on Github</title>
 	<link>https://www.seignard.fr/composite.html</link>
 	<guid>https://www.seignard.fr/composite.html</guid>

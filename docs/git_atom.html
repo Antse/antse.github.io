@@ -4,11 +4,11 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta http-equiv="Content-Language" content="en" />
 	<meta name="viewport" content="width=device-width" />
-	<meta name="keywords" content="blog, stagit, stagit-gopher, nomad, tailscale, datadog" />
-	<meta name="description" content="blog with various projects and articles about computer-related things" />
+	<meta name="keywords" content="github feed atom " />
+	<meta name="description" content="Follow github activity using special links" />
 	<meta name="author" content="antoine" />
 	<meta name="generator" content="saait (https://git.codemadness.org/saait/file/README.html)" />
-	<title>Posts - Pages</title>
+	<title>Atom feeds on Github - Pages</title>
 	<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="print.css" type="text/css" media="print" />
 	<link rel="alternate" href="atom.xml" type="application/atom+xml" title="Pages Atom Feed" />
@@ -22,11 +22,11 @@
 			<td id="links" align="left">
 				<a href="index.html">Blog</a> |
 				<a href="https://github.com/antse" title="Git repository with some of my work">Git</a> |
-				<a href="gopher://seignard.fr">Gopherhole</a>
+				<a href="gopher://gopher.seignard.fr">Gopherhole</a>
 			</td>
 			<td id="links-contact" align="right">
 				<span class="hidden"> | </span>
-				<a href="rss.xml">Feeds</a> |
+				<a href="feeds.html">Feeds</a> |
 				<a href="pgp.asc">PGP</a> |
 				<a href="mailto:antoine@AT@seignard.DOT.fr">Mail</a>
 			</td>
@@ -36,14 +36,26 @@
 	<hr class="hidden" />
 	<main id="mainwrap">
 		<div id="main">
-			<h1>Posts</h1><h2>Last update: 2023-02-21</h2>
-			<table>
-<tr><td><time>2023-02-15</time></td><td><a href="tailscale.html">Tailscale ACL restrictions </a></td></tr>
-<tr><td><time>2023-02-15</time></td><td><a href="submodules.html">Submodules on Git</a></td></tr>
-<tr><td><time>2023-01-13</time></td><td><a href="nomad_logging.html">Logging to Datadog from Nomad workload</a></td></tr>
-<tr><td><time>2023-02-21</time></td><td><a href="git_atom.html">Atom feeds on Github</a></td></tr>
-<tr><td><time>2023-01-18</time></td><td><a href="composite.html">Composite actions on Github</a></td></tr>
-			</table>
+			<article>
+<header>
+	<h1>Atom feeds on Github</h1>
+	<p>
+	<strong>Last modification on </strong> <time>2023-02-21</time>
+	</p>
+</header>
+
+<h2>Repo releases</h2>
+<p>https://github.com/:owner/:repo/releases.atom</p>
+<h2>Repo commits</h2>
+<p>https://github.com/:owner/:repo/commits.atom</p>
+<h2>Private feed</h2>
+<p>https://github.com/:user.private.atom?token=:secret</p>
+<h2>Repo tags</h2>
+<p>https://github.com/:user/:repo/tags.atom</p>
+<h2>User activity</h2>
+<p>https://github.com/:user.atom</p>
+
+			</article>
 		</div>
 	</main>
 </body>
