@@ -149,6 +149,76 @@ cluster" /></p>
 ]]></description>
 </item>
 <item>
+	<title>Tech News with newsboat</title>
+	<link>https://www.seignard.fr/newsboat.html</link>
+	<guid>https://www.seignard.fr/newsboat.html</guid>
+	<dc:date>2023-03-02T00:00:00Z</dc:date>
+	<author>antoine</author>
+	<description><![CDATA[<h1>Tech News with newsboat</h1>
+        <p><strong>Last modification on </strong> <time>2023-03-02</time></p>
+        <p>Chaque personne à sa propre méthode pour faire de la veille technique.</p>
+<p>Pour ma part, j'essaye de regrouper un maximum d'information à 1 seul endroit.</p>
+<p>une grande partie des sites web ont un flux rss qui est mis à jour dès qu'une
+news est publiée.</p>
+<p>En utilisant un logiciel pouvant traquer ces flux, la veille est tout de suite
+plus simple au quotidien.</p>
+<p>Dans ce billet je vais vous présenter un outil que j'utilise pour faire
+quotidiennement ma veille.</p>
+<h2>Newsboat</h2>
+<p>Newsboat est un utilitaire en ligne de commande qui permet de traquer simplement
+des flux rss/atom.</p>
+<p>Pourquoi newsboat ? </p>
+<ul>
+<li>pour sa simplicité à configurer</li>
+<li>pour la possibilité de ne jamais lever les mains du clavier :)</li>
+<li>parce qu'on peut utiliser les touches vim pour naviguer :D</li>
+</ul>
+<h2>Configuration</h2>
+<p>La configuration de Newsboat se fait dans 2 fichiers : </p>
+<h3>~/.config/newsboat/config (pour la configuration de newsboat)</h3>
+<p>Voici un exemple de configuration : </p>
+<pre><code>auto-reload yes
+reload-threads 100
+# display
+show-read-feeds no
+feed-sort-order unreadarticlecount-asc
+color info default default reverse
+color listnormal_unread yellow default
+color listfocus blue default reverse bold
+color listfocus_unread blue default reverse bold
+text-width 80
+# unbind keys
+unbind-key ENTER
+unbind-key j
+unbind-key k
+unbind-key J
+unbind-key K
+# bind keys - vim style
+bind-key j down
+bind-key k up
+bind-key l open
+bind-key h quit
+# highlights
+highlight article &quot;^(Title):.*$&quot; blue default
+highlight article &quot;https?://[^ ]+&quot; red default
+highlight article &quot;\\[image\\ [0-9]+\\]&quot; green default
+# open an internet link by typing on ENTER
+macro l set browser &quot;open -a Safari %u&quot;; open-in-browser ; set browser &quot;links&quot; define-filter &quot;Starred&quot; &quot;flags = \&quot;s\&quot;&quot;
+macro i set browser &quot;feh %u&quot;; open-in-browser ; set browser &quot;elinks %u&quot;
+</code></pre>
+<h3>~/.config/newsboat/urls (pour la configuration des flux)</h3>
+<p>Voici un exmple de configuration :</p>
+<pre><code>https://tailscale.com/blog/index.xml
+https://www.hashicorp.com/blog/products/nomad/feed.xml
+https://news.ycombinator.com/rss
+https://www.exploit-db.com/rss.xml
+https://www.bsdnow.tv/rss
+https://github.blog/changelog/label/actions/feed/
+https://github.com/hashicorp/nomad/releases.atom
+</code></pre>
+]]></description>
+</item>
+<item>
 	<title>Atom feeds on Github</title>
 	<link>https://www.seignard.fr/git_atom.html</link>
 	<guid>https://www.seignard.fr/git_atom.html</guid>

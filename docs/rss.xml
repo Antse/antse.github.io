@@ -31,6 +31,14 @@
 	<description>How to stream logs from a Nomad workload</description>
 </item>
 <item>
+	<title>Tech News with newsboat</title>
+	<link>https://www.seignard.fr/newsboat.html</link>
+	<guid>https://www.seignard.fr/newsboat.html</guid>
+	<dc:date>2023-03-02T00:00:00Z</dc:date>
+	<author>antoine</author>
+	<description>How to quickly check multiple tech news </description>
+</item>
+<item>
 	<title>Atom feeds on Github</title>
 	<link>https://www.seignard.fr/git_atom.html</link>
 	<guid>https://www.seignard.fr/git_atom.html</guid>

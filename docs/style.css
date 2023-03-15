@@ -85,7 +85,8 @@ a {
     transition: color 0.2s ease, border-color 0.2s ease
 }
 a:hover {
-    color: #48098c;
+    color: rgb(0, 0, 0);
+    /* color: #48098c; */
     border-color: inherit
 }
 .hidden {
@@ -110,7 +111,8 @@ a:hover {
     	transition: color 0.2s ease, border-color 0.2s ease
 	}
 	a:hover {
-		color: #e1d589;
+		color: rgb(255, 255, 255);
+		/* color: #e1d589; */
 		border-color: inherit
 	}
 	#main {
@@ -123,5 +125,5 @@ a:hover {
     --link-foreground: #6a6b6f;
     --dark-body-foreground: #aaaaaa;
     --dark-body-background: #000000;
-    --dark-link-foreground: #e1d589
+    --dark-link-foreground: #e1d589;
 }
