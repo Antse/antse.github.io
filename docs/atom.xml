@@ -31,6 +31,18 @@
 	<summary type="text">use Git submodules</summary>
 </entry>
 <entry>
+	<title type="text">TLS for nomad ui and nodes communication</title>
+	<link rel="alternate" type="text/html" href="https://www.seignard.fr/nomadtls.html" />
+	<id>https://www.seignard.fr/nomadtls.html</id>
+	<updated>2023-03-15T00:00:00Z</updated>
+	<published>2023-03-15T00:00:00Z</published>
+	<author>
+		<name>antoine</name>
+		<uri>https://www.seignard.fr</uri>
+	</author>
+	<summary type="text">Enable TLS on a nomad cluster</summary>
+</entry>
+<entry>
 	<title type="text">Logging to Datadog from Nomad workload</title>
 	<link rel="alternate" type="text/html" href="https://www.seignard.fr/nomad_logging.html" />
 	<id>https://www.seignard.fr/nomad_logging.html</id>
