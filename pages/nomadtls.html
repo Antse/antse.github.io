@@ -11,7 +11,8 @@
 <ol>
 <li>create a <code>cfssl.json</code> config file </li>
 </ol>
-<pre><code>{
+<p><code>
+{
 	&quot;signing&quot;: {
 		&quot;default&quot;: {
 			&quot;expiry&quot;: &quot;87600h&quot;,
@@ -19,65 +20,65 @@
 		}
 	}
 }
-</code></pre>
+</code>
 <ol>
 <li>issue server certificates</li>
 </ol>
-<pre><code>echo '{}' | cfssl gencert -ca=nomad-ca.pem -ca-key=nomad-ca-key.pem -config=cfssl.json \
-</code></pre>
-<pre><code>-hostname=&quot;server.global.nomad,localhost,127.0.0.1&quot; - | cfssljson -bare server
-</code></pre>
+<p><code>
+	echo '{}' | cfssl gencert -ca=nomad-ca.pem -ca-key=nomad-ca-key.pem -config=cfssl.json \
+    -hostname=&quot;server.global.nomad,localhost,127.0.0.1&quot; - | cfssljson -bare server
+</code>
 <ol>
 <li>issue client certificates</li>
 </ol>
-<pre><code>echo '{}' | cfssl gencert -ca=nomad-ca.pem -ca-key=nomad-ca-key.pem -config=cfssl.json \
-</code></pre>
-<pre><code>-hostname=&quot;client.global.nomad,localhost,127.0.0.1&quot; - | cfssljson -bare client
-</code></pre>
+<p><code>
+	echo '{}' | cfssl gencert -ca=nomad-ca.pem -ca-key=nomad-ca-key.pem -config=cfssl.json \
+    -hostname=&quot;client.global.nomad,localhost,127.0.0.1&quot; - | cfssljson -bare client
+</code>
 <ol>
 <li>issue cli certificate</li>
 </ol>
-<pre><code>echo '{}' | cfssl gencert -ca=nomad-ca.pem -ca-key=nomad-ca-key.pem -profile=client \
-</code></pre>
-<pre><code>- | cfssljson -bare cli
-</code></pre>
+<p><code>
+echo '{}' | cfssl gencert -ca=nomad-ca.pem -ca-key=nomad-ca-key.pem -profile=client \
+  - | cfssljson -bare cli
+</code>
 <ol>
-<li>copy all those certificates on <code>/etc/certs</code> Nomad servers</li>
-<li>change owner on <code>/etc/certs</code></li>
+<li>copy all those certificates on <strong>/etc/certs</strong> Nomad servers</li>
 </ol>
-<pre><code>$ sudo chown -R nomad:nomad /etc/certs
-</code></pre>
+</p>
+</p>
+</p>
+</p>
 <ol>
-<li>copy CA certificate on trusted pki CA (each servers)</li>
+<li>change owner on <strong>/etc/certs</strong></li>
+</ol>
+<p><code>$ sudo chown -R nomad:nomad /etc/certs</code></p>
+<ol>
+<li><p>copy CA certificate on trusted pki CA (each servers)</p>
+</li>
 <li> update the nomad config wit hthe following stanza</li>
 </ol>
-<pre><code># Require TLS
-</code></pre>
-<p>  tls {
-<pre><code>http = true
-rpc  = true
-</code></pre>
-<p><br />  
-<pre><code>ca_file   = &quot;nomad-ca.pem&quot;
-cert_file = &quot;server.pem&quot;
-key_file  = &quot;server-key.pem&quot;
-</code></pre>
-<p><br />  
-<pre><code>verify_server_hostname = false
-verify_https_client    = false
-</code></pre>
-<p>  }
+<p><code></code>
+<h1>Require TLS</h1>
+<p>tls {
+  http = true
+  rpc  = true</p>
+</p>
+<p>  ca<em>file   = &quot;nomad-ca.pem&quot;
+  cert</em>file = &quot;server.pem&quot;
+  key_file  = &quot;server-key.pem&quot;</p>
+<p>  verify<em>server</em>hostname = false
+  verify<em>https</em>client    = false
+}
+<code></code>
 <ol>
 <li>restart nomad service</li>
 </ol>
-<pre><code>$ sudo service nomad restart
-</code></pre>
+<p><code>$ sudo service nomad restart</code></p>
+</p>
 <ol>
-<li>update traefik configuration nomad service endpoint address</li>
+<li><p>update traefik configuration nomad service endpoint address</p>
+</li>
 <li>update traefik configuration nomad service endpoint tls option to not check</li>
 </ol>
 <p>CA</p>
-</p>
-</p>
-</p>
-</p>
