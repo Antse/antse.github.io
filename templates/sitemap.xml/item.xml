@@ -1,4 +1,0 @@
-<url>
-	<loc>${siteurl}/${filename}</loc>
-	<lastmod>${updated}</lastmod>
-</url>
